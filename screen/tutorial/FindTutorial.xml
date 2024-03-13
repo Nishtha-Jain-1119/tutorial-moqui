@@ -10,6 +10,12 @@
             <search-form-inputs/></entity-find>
     </actions>
     <widgets>
+        <container-dialog id="CreateTutorialDialog" button-text="Create Tutorial">
+            <form-single name="CreateTutorial" transition="createTutorial">
+                <auto-fields-entity entity-name="tutorial.Tutorial" field-type="edit"/>
+                <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+            </form-single>
+        </container-dialog>
         <form-list name="ListTutorials" list="tutorialList" header-dialog="true" skip-form="true">
             <auto-fields-entity entity-name="tutorial.Tutorial" field-type="find-display"/>
             <field name="description">
